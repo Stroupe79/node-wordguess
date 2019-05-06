@@ -21,7 +21,9 @@ function wordGet() {
             solution = response.body.word
             array = solution.split("")
             letter = new Word(array)
-            console.log (letter.letters)
+            length = array.length
+            console.log (`The current word to guess is ${letter.letters}`)
+            console.log (array.length)
             gameLogic()
         });
 };
@@ -47,8 +49,9 @@ inquirer
     .then(function (response) {
         console.log(`You guessed ${response.guess} your word is ` + letter.letters);
         chances++;
-        console.log(chances)
+        console.log(chances);
         gameLogic();
+        contains(response.guess);
     });
 } else {
     console.log (`Game Over! Your word was ${solution}`)

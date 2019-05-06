@@ -19,5 +19,5 @@ function contains(guess){
     }
 }
 
-module.exports = contains
+module.exports = contains;
 module.exports = Word;
