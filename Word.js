@@ -1,4 +1,4 @@
-// const Letter = require("./Letter")
+const Letter = require("./Letter")
 
 
 const Word = function (letters){
